@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Calcular Raiz Quadrada</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        input::placeholder {
+            color: white;
+        }
+
+        #raiz::placeholder {
+            color: red;
+        }
+    </style>
+    <script>
+
+        function calculaRaiz()
+        {
+            var y;
+            var raiz = 0;
+            var numero = document.getElementById('numero');
+            numero = numero.value;
+            numero = numero.replace(".","");
+            numero = numero.replace(".","");
+            numero = numero.replace(".","");
+            numero = numero.replace(".","");
+            numero = numero.replace(".","");
+            numero = numero.replace(".","");
+            numero = numero.replace(".","");
+            numero = numero.replace(".","");
+            numero = numero.replace(".","");
+            numero = numero.replace(".","");
+            numero = numero.replace(",","");
+            numero = numero.replace(",","");
+            numero = numero.replace(",","");
+            numero = numero.replace(",","");
+            numero = numero.replace(",","");
+            numero = numero.replace(",","");
+            numero = numero.replace(",","");
+            numero = numero.replace(",","");
+            numero = numero.replace(",","");
+            numero = numero.replace(",","");
+            numero = parseInt(numero);
+
+            // alert(numero);
+
+            for(x=0;x<=numero;x++)
+            {
+                y = x*x;
+                // console.log(y);
+
+
+                if(y == numero)
+                {
+                    if(y/x == x)
+                    {
+
+                        raiz = x;
+                        break;
+                    }
+                }
+                else if(x == numero)
+                {
+                    raiz = null;
+                }
+            }
+
+            var saida = document.getElementById('raiz');
+
+            if(raiz == null)
+            {
+                saida.value = 'Não existe raiz quadrada para esse número';
+            }
+            else
+            {
+                saida.value ='A raiz quadrada de '+numero+' é '+raiz;
+            }
+            // console.log(raiz);
+            // document.getElementById('raiz').value = raiz;
+        }
+    </script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div style="background-color:black;">
+        <h2 class="h2" style="color:white; text-align: center;">Calculador de Raiz Quadrada</h2>
+    </div>
+      <input type="text" style="width:700px; border-radius: 5px; border:2px solid blue; background-color:black; color:white; display: block;"  id="numero" placeholder="Digite o número que gostaria de achar a raiz quadrada">
+      <input type="text" id ="raiz" readonly style="width:700px; margin-top:10px; border-radius: 5px; border:2px solid red; background-color:black; color:white; display: block;" placeholder="resultado...">
+      <input type="button" onclick="calculaRaiz()" value="Calcular Raiz" style="margin-top:10px; width:150px; margin-left:10px; background-color:green; border-radius:5px; border:2px solid greenyellow;">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
